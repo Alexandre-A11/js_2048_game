@@ -22,7 +22,16 @@ class Game {
    */
   constructor(initialState) {
     // eslint-disable-next-line no-console
-    console.log(initialState);
+    this.board = initialState
+      ? initialState.map((line) => [...line])
+      : [
+          [0, 0, 0, 0],
+          [0, 0, 0, 0],
+          [0, 0, 0, 0],
+          [0, 0, 0, 0],
+        ];
+
+    this.score = 0;
   }
 
   moveLeft() {}
